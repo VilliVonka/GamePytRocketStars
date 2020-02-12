@@ -148,15 +148,18 @@ def check_impact():
 
 while True:
     window.update()
-    check_impact()
     if game_over():
         continue
+    check_impact()
     check_enemy_count()
 
     check_interceptions()
 
     move_missiles(missiles=our_missiles)
     move_missiles(missiles=enemy_missiles)
+
+
+
 
 
 
