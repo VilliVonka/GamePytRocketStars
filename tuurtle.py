@@ -15,21 +15,9 @@ window.tracer(n=2)
 
 ENEMY_CONST = 5
 
-
-
 #множественное присвоение координат базы
 BASE_X, BASE_Y = 0, -300
-#координаты полета ракеты
-#def calc_heading(x1, y1, x2, y2):
- #   dx = x2 - x1
- #   dy = y2 - y1
- #   lenght = (dx ** 2 + dy ** 2 ) ** 0.5
- #   cos_alpha = dx / lenght
- #   alpha = math.acos(cos_alpha)
-#    alpha = math.degrees(alpha)
- #   if dy <0:
- #       alpha = -alpha
- #   return alpha
+
 
 
 def create_missile(color, x, y, x2, y2):
