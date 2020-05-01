@@ -173,10 +173,10 @@ def collide(obj1, obj2):
 def main():
     run = True
     FPS = 60
-    level = 0
-    lives = 5
-    main_font = pygame.font.SysFont("comicsans", 50)
-    lost_font = pygame.font.SysFont("comicsans", 70)
+    level = 0 #start position
+    lives = 5 #start position
+    main_font = pygame.font.SysFont("comicsans", 50) #start position
+    lost_font = pygame.font.SysFont("comicsans", 70) #start position
 
     enemies = []
     wave_length = 5 #count of enemies at the same time
@@ -224,7 +224,7 @@ def main():
             lost = True
             lost_count += 1
 
-        # show 3 second message LOST
+        # show 5 second message LOST
         if lost:
             if lost_count > FPS * 5:
                 #game over
@@ -234,8 +234,9 @@ def main():
 
         #optimize enemies part1
         if len(enemies) == 0:
-            level += 1
-            wave_length += 5
+            level += 1          #level up in the absence of enemies
+            wave_length += 5    #and add more enemies
+            
             #determine enemies and he's position in non work space (spawn enemies)
             for i in range(wave_length):
                 enemy = Enemy(random.randrange(50, WIDTH-100), random.randrange(-1000,-100),
